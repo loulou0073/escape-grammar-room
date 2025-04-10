@@ -49,7 +49,7 @@
   <div class="container">
     <h1>Escape the Grammar Room</h1>
     <h2>Stage 3: The Curse of Clarity</h2>
-    <p><strong>Challenge:</strong> They made clear it that they were leaving.</p>
+    <p><strong>Challenge:</strong> They made clear for us to leave the town.</p>
     <p>Fix the incorrect sentence.</p>
     <input type="text" id="answer" placeholder="Type your answer here...">
     <button onclick="checkAnswer()">Submit</button>
@@ -63,7 +63,7 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.trim().toLowerCase();
-      const correct = "they made it clear that they were leaving.";
+      const correct = "they made it clear for us to leave the town.";
       if (input === correct) {
         document.getElementById("result").textContent = "Correct!";
         document.getElementById("next").classList.remove("hidden");
