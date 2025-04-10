@@ -49,7 +49,7 @@
   <div class="container">
     <h1>Escape the Grammar Room</h1>
     <h2>Stage 5: The Vanishing Visitor</h2>
-    <p><strong>Challenge:</strong> We thought it strange that she didn’t come.</p>
+    <p><strong>Challenge:</strong> We thought it strange for her not to come.</p>
     <p>Copy this sentence (write it exactly).</p>
     <input type="text" id="answer" placeholder="Type your answer here...">
     <button onclick="checkAnswer()">Submit</button>
@@ -63,7 +63,7 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.trim().toLowerCase();
-      const correct = "we thought it strange that she didn’t come.";
+      const correct = "we thought it strange for her not to come.";
       if (input === correct) {
         document.getElementById("result").textContent = "Correct!";
         document.getElementById("next").classList.remove("hidden");
