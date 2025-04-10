@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape the Grammar Room - Stage 3: The Curse of Clarity</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #1c1c1c;
+      color: #f5f5f5;
+      padding: 40px;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #2e2e2e;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #5a2a83;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #5a2a83;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    a {
+      color: #9b59b6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Escape the Grammar Room</h1>
+    <h2>Stage 3: The Curse of Clarity</h2>
+    <p><strong>Challenge:</strong> They made clear it that they were leaving.</p>
+    <p>Fix the incorrect sentence.</p>
+    <input type="text" id="answer" placeholder="Type your answer here...">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+    <div id="next" class="hidden">
+      <p>✅ Correct! You've unlocked the next door.</p>
+      <p><a href='stage4.html'>Go to the next stage 🔮</a></p>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+      const correct = "they made it clear that they were leaving.";
+      if (input === correct) {
+        document.getElementById("result").textContent = "Correct!";
+        document.getElementById("next").classList.remove("hidden");
+      } else {
+        document.getElementById("result").textContent = "Try again... the door remains locked.";
+      }
+    }
+  </script>
+</body>
+</html>
